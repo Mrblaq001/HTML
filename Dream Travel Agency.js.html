@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+ <head>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dream Travel Agency - Explore our top travel packages">
+    <title>Dream Travel Agency - Packages</title>
+    <style>
+        /* General table styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #8ac1f8;
+            margin: 0; 
+            padding: 20px;
+            color: #333;
+        }
+        .table-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0, 0, 0.1);
+            overflow-x: auto; /* Horizontal scroll for small screens */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        th:hover {
+            background-color: #0056b3;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #72879b;
+            transition: background-color 0.3s;
+        }
+        /* Accessibility focus styles */
+        th:focus, td:focus {
+            outline: 2px solid #007bff;
+            outline-offset: 2px;
+        }
+        /* Button styling for booking links */
+        .book-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .book-btn:hover {
+            background-color: #218838;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+            .table-container {
+                font-size: 14px;
+            }
+            th:nth-child(4), td:nth-child(4) {
+                display: none; /* Hide 'Inclusions' on small screens */
+            }
+        }
+        /* Caption styling */
+        caption {
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f1f3f5;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="table-container">
+        <table role="grid" aria-describedby="table-desc">
+            <caption id="table-desc">Dream Travel Agency - Top Travel Packages</caption>
+            <thead>
+                <tr>
+                    <th scope="col" tabindex="0" onclick="sortTable(0)">Destination</th>
+                    <th scope="col" tabindex="0" onclick="sortTable(1)">Price (USD)</th>
+                    <th scope="col" tabindex="0" onclick="sortTable(2)">Duration</th>
+                    <th scope="col" tabindex="0">Inclusions</th>
+                    <th scope="col" tabindex="0">Book Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Santorini, Greece</td>
+                    <td data-price="1200">$1,200</td>
+                    <td>7 days</td>
+                    <td>Flights, Hotel, Tours</td>
+                    <td><a href="#book" class="book-btn" aria-label="Book Santorini package">Book</a></td>
+                </tr>
+                <tr>
+                    <td>Tokyo, Japan</td>
+                    <td data-price="1500">$1,500</td>
+                    <td>10 days</td>
+                    <td>Flights, Hotel, Cultural Tours</td>
+                    <td><a href="#book" class="book-btn" aria-label="Book Tokyo package">Book</a></td>
+                </tr>
+                <tr>
+                    <td>Bali, Indonesia</td>
+                    <td data-price="900">$900</td>
+                    <td>5 days</td>
+                    <td>Hotel, Spa, Local Tours</td>
+                    <td><a href="#book" class="book-btn" aria-label="Book Bali package">Book</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+       
+ </body>
+ </html

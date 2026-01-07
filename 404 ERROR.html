@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR PAGE</title>
+    <style>
+        /* Model */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0c0c0c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgb(247, 239, 239);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+            color: #ff6347; /* Tomato color for emphasis */
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #067dfc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .container {
+                margin: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .btn {
+                padding: 8px 16px;
+            }
+        }
+        /* Animation for fun */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .animated {
+            animation: bounce 2s infinite;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <h1 class="animated">404</h1>
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <p>It might have been moved or deleted. Let's get you back on track.</p>
+        <a href="/" class="btn">Go to Home</a>
+    </div>
+    <script>
+        // JavaScript for additional interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.querySelector('.btn');
+            btn.addEventListener('click', function(event) {
+                // Optional: Add a confirmation or animation before redirect
+                console.log('Redirecting to home...');
+                // You can add more JS logic here if needed
+            });
+        });
+    </script>
+ </body>
+ </html
